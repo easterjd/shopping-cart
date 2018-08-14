@@ -5,7 +5,7 @@ import CartItemComp from './CartItemComp'
 const CartItems = (props) => {
 
   const cartItemsList = props.cartItemsList
-  const items = cartItemsList.map(item => <CartItemComp prodId={item.product.id} name={item.product.name} priceInCents={item.product.priceInCents} quant={item.quantity} />)
+  const items = cartItemsList.map((item, index) => <CartItemComp key={index} prodId={item.product.id} name={item.product.name} priceInCents={item.product.priceInCents} quant={item.quantity} />)
   return (<div className="container">
             <h1>Items</h1>
             <div className="list-group">

@@ -52,7 +52,7 @@ class AddItem extends Component {
 
 const QuantControl = (props) => {
   return (
-    <div className="form-group text-center">
+    <div className="form-group">
       Quantity: <input value={props.value} className="form-text form-control" type={props.type} name={props.name} placeholder={props.placeholder} onChange={props.onChange} />
     </div>
   )
@@ -62,8 +62,8 @@ const ProdDrop = (props) => {
   const products = props.products
   const options = products.map((prod, index) => (<option key={index} value={prod.name}>{prod.name}</option>))
   return (
-    <div className="form-group text-center">
-      <select className="form-control" onChange={props.onChange} name={props.name} placeholder={props.placeholder}>
+    <div className="form-group">
+      Product: <select className="form-control" onChange={props.onChange} name={props.name} placeholder={props.placeholder}>
         <option value="">Select A Product</option>
         {options}
       </select>
